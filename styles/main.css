@@ -111,10 +111,16 @@ footer {
 label {
   color: orange;
 }
+
+.indicates-required {
+  color: var(--secondary);
+}
+
 #mc_embed_signup {
   font-weight: 400;
   clear: left;
   max-width: 800px;
+  background-color: black;
 }
 
 #mc_embed_signup .mc-field-group input {
