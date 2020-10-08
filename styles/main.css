@@ -57,7 +57,7 @@ nav a {
 
 nav a:hover {
   color: var(--secondary);
-  text-shadow: 2px 2px 2px rgb(0 0 0);
+  /* text-shadow: 2px 2px 2px rgb(0 0 0); */
 }
 
 /* UTILITIES */
@@ -68,6 +68,12 @@ nav a:hover {
   color: var(--secondary);
 }
 
+.linkhover {
+  font-weight: bold;
+}
+.linkhover:hover {
+  color: var(--secondary);
+}
 /* SOCIAL ICONS */
 .social__icons {
   background-color: var(--primary);
@@ -87,7 +93,7 @@ nav a:hover {
 
 .social__icons a:hover {
   color: var(--secondary);
-  text-shadow: 2px 2px 2px rgb(0 0 0);
+  /* text-shadow: 2px 2px 2px rgb(0 0 0); */
 }
 
 .label {
