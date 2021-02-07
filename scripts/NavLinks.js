@@ -6,10 +6,12 @@ export const NavLinks = () => {
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./music.html">Music</a></li>
-        <li><a href="./news.html">News</a></li>
         <li><a href="./tour.html">Tour</a></li>
-        <li><a href="./subscribe.html">Subscribe</a></li>
-    </ul>
-  </div>
-  `;
+        <li><a href="./subscribe.html">Sign Up</a></li>
+        <li><a href="./getinvolved.html">Get Involved</a></li>
+        </ul>
+        </div>
+        `;
 };
+
+// <li><a href="./news.html">News</a></li>
