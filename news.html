@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:wght@400;500;800&family=Nanum+Pen+Script" rel="stylesheet">
+    <!-- Tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Kaitlyn Myers - News</title>
+</head>
+
+<body>
+    <!-- Name Header -->
+    <header id="header"></header>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="mx-auto"></nav>
+
+    <!-- Tour Content -->
+    <h2 class="page__title center text-4xl">NEWS</h2>
+    <p class="center font-normal text-orange-400 p-8">News info here</p>
+
+    <!-- VIDEO TEST -->
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div class="videoWrapper">
+        <!-- OVERLAY GOES HERE -->
+        <div class="video__overlay">Click for Video</div>
+        <!-- Video embed goes here -->
+        <div id="player">
+        </div>
+    </div>
+
+    <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '100%',
+                width: '100%',
+                videoId: 'D4H8zcX1ccY',
+                playerVars: {
+                    'autoplay': 1,
+                    'showinfo': 0,
+                    'autohide': 1,
+                    'loop': 1,
+                    'controls': 0,
+                    'modestbranding': 1,
+                    'vq': 'hd1080',
+                    'rel': 0,
+                },
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+            player.mute();
+        }
+
+        // 5. The API calls this function when the player's state changes.
+        //    The function indicates that when playing a video (state=1),
+        //    the player should play for six seconds and then stop.
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.ENDED) {
+                player.seekTo(0);
+                player.playVideo();
+            }
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+    </script>
+    <!-- END VIDEO -->
+
+    <p class="center font-normal text-orange-400"><a href="./subscribe.html" class="linkhover">Click Here</a> to Subscribe for Email Updates</p>
+
+    <!-- Social Icons -->
+    <section id="social__icons"></section>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html>
